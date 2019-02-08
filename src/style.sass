@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter')
+@import url('https://fonts.googleapis.com/css?family=Merienda')
+
+$bg-color: #f6b93b
+$font-family: 'Bitter', serif
+$font-size: 18px
+
+
+=insideOfBox()
+  height: 75px
+  line-height: 80px
+  text-align: center
+
+html
+  font-size: $font-size
+  font-weight: bold
+body
+  font-size: 1rem
+  background-color: $bg-color
+  font-family: $font-family
+  color: #fff
+
+  height: 100vh
+  width: 100vw
+
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+
+  @media(max-width: 766px)
+    font-size: .9rem
+
+  @media(max-width: 480px)
+    font-size: .7rem
+
+.intro-title
+  margin-bottom: 1em
+  margin-top: -5em
+  .game-name
+    font-family: 'Merienda', cursive
+    font-size: 1.2em
+
+
+.game-board
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+  width: 320px
+  height: 320px
+  perspective: 1000px
+  @media(max-width: 766px)
+    width: 75vw
+    height: 55vh
+
+  .container
+    +insideOfBox()
+    flex-basis: 24%
+    background-color: #fa983a
+    position: relative
+    transition: all .3s ease-in
+    perspective: 1000px
+    transform-style: preserve-3d
+    z-index: 2
+    &.flip, &.always-flipped
+      transform: rotateY(180deg)
+
+    p
+      font-family: 'Merienda', cursive
+
+  .box
+    +insideOfBox()
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    z-index: 1
+    pointer-events: none
+  .back-box
+    +insideOfBox()
+    z-index: -1
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    transform: rotateY(180deg)
+    pointer-events: none
+    img
+      width: 80%
+      height: 80%
+      pointer-events: none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
+/**/
+/**/

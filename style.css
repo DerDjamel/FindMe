@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=Bitter");
+@import url("https://fonts.googleapis.com/css?family=Merienda");
+html {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+body {
+  font-size: 1rem;
+  background-color: #f6b93b;
+  font-family: "Bitter", serif;
+  color: #fff;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media(max-width: 766px) {
+  body {
+    font-size: 0.9rem;
+  }
+}
+@media(max-width: 480px) {
+  body {
+    font-size: 0.7rem;
+  }
+}
+.intro-title {
+  margin-bottom: 1em;
+  margin-top: -5em;
+}
+.intro-title .game-name {
+  font-family: "Merienda", cursive;
+  font-size: 1.2em;
+}
+
+.game-board {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 320px;
+  height: 320px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+@media(max-width: 766px) {
+  .game-board {
+    width: 75vw;
+    height: 55vh;
+  }
+}
+.game-board .container {
+  height: 75px;
+  line-height: 80px;
+  text-align: center;
+  -ms-flex-preferred-size: 24%;
+      flex-basis: 24%;
+  background-color: #fa983a;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  z-index: 2;
+}
+.game-board .container.flip, .game-board .container.always-flipped {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.game-board .container p {
+  font-family: "Merienda", cursive;
+}
+.game-board .box {
+  height: 75px;
+  line-height: 80px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.game-board .back-box {
+  height: 75px;
+  line-height: 80px;
+  text-align: center;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  pointer-events: none;
+}
+.game-board .back-box img {
+  width: 80%;
+  height: 80%;
+  pointer-events: none;
+}
+
+/* */
+/* */
+/* */
+
+/*# sourceMappingURL=style.css.map */

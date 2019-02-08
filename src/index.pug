@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title Find me
+    link(rel="stylesheet" href="css/reboot.css")
+    link(rel="stylesheet" href="style.css")
+    
+  body
+    h1.intro-title welcome to 
+      span.game-name Find me
+    
+    section.game-board
+      - var boxes_number = 16;
+      - var n = 1;
+      
+      while n <= boxes_number
+        .container
+          .box(id=n++)
+          .back-box
+            img
+    br
+    p#note start playing
+    script(src="app.js")
+           
+        
